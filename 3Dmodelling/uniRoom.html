@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="/style.css">
+        <link rel="icon" href="/media/img/favicon.ico?v=2">
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500&display=swap" rel="stylesheet">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Steven White Portfolio</title>
+    </head>
+<body>
+    <div class="header">
+        <div class="SWPlogo">
+            <a href="/index.html"><img src="/media/img/SWlogo.png" alt="Home page"></a>
+        </div>
+        <div class="navbar">
+            <a href="/contact.html">Contact</a>
+            <a href="/programming.html">Programming</a>
+            <a href="/3DModelling.html">3D Modelling</a>
+            <a href="/index.html">Home</a>
+        </div>
+    </div>
+
+    <div class="projectgradientbg">
+        <div class="projectbgcontainer">
+            <h1 id="projectbgtitle">
+                Realistic Room
+            </h1>
+            <span>
+                designed for my university
+            </span>
+        </div>
+    </div>
+
+
+<div class="maincontent">
+
+    <div class="slideshow_container">
+        <img src="/media/img/3DModelling/uniRoomFinalColourCorrected.png" alt="" style="width: 100%;">
+        <div class="img_caption">Final Render - Colour Corrected</div>
+    </div>
+
+    <div class="slideshow_container">
+        <img src="/media/img/3DModelling/uniRoomFinal.png" alt="" style="width: 100%;">
+        <div class="img_caption">Final Render</div>
+    </div>
+
+    <div class="slideshow_container">
+        <img src="/media/img/3DModelling/uniRoomModels.png" alt="" style="width: 100%;">
+        <div class="img_caption">Models</div>
+    </div>
+
+    <button class="button-left" onclick="plusDivs(-1)">&#10094;</button>
+    <button class="button-right" onclick="plusDivs(+1)">&#10095;</button>
+
+
+    <div class="project_desc">
+        <h2>Programs Used:</h2>
+        <p>
+            Blender, Adobe Photoshop
+        </p>
+
+        <h3>About</h3>
+        <p id="margin-bottom">
+            This was created as my final project on my 3D Modelling course at university, and it is the first project in which I aimed for a <b>"hyper-realistic"</b> style. Creating this scene involved using both familiar and various new technologies. For example, for some of the textures, I made use of the <a href="https://www.poliigon.com/" target="_blank">Poliigon</a> plugin for Blender. This made finding and applying seamless textures easy and fast. Before this, I spent time making my own seamless textures and the supplementary maps which, while it was fun, took up a lot of my time. This was also my first experiment with using <b>particle systems</b>, which I used to create the dust particles where the light streams in from the windows. This detail is hard to see but, I think, adds a lot to the realism of the scene.
+            <br><br>
+            I learned a ton with this project: How to have an efficient workflow, how to plan and frame a scene, how to save time when creating a 3D scene, what to look out for in realistic renders, and much more.
+            <br><br>
+            If I were to remake this room, there is honestly quite a lot I would change. For starters, I would create an exterior for the room, so it is not just floating in space and the viewer can actually imagine what kind of world this is. I would also fix a lot of the sharp edges, such as on the rug, the pillar, and above the lights. For an extra layer of realism, I would add more dirt and dust to the places with ambient occlusion - These corners are never spotless in the real world so adding some grime can go a long way to improving the realism.
+        </p>
+    </div>
+</div>
+
+
+<!-- Image Slideshow [W3Schools] -->
+<script>
+var slideIndex = 1;
+showDivs(slideIndex);
+
+function plusDivs(n) {
+    showDivs(slideIndex += n);
+}
+
+function showDivs(n) {
+    var i;
+    var x = document.getElementsByClassName("slideshow_container");
+    if (n > x.length) {slideIndex = 1}
+    if (n < 1) {slideIndex = x.length}
+    for (i = 0; i < x.length; i++) {
+        x[i].style.display = "none";
+    }
+    x[slideIndex-1].style.display = "block";
+}
+</script>
+<!-- Image Slideshow [W3Schools] -->
+
+
+</body>
+</html>
