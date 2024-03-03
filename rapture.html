@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="./style.css">
+        <link rel="icon" href="./media/img/favicon.ico?v=2">
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500&display=swap" rel="stylesheet">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Steven White Portfolio</title>
+    </head>
+<body>
+    <div class="header">
+        <div class="SWPlogo">
+            <a href="./index.html"><img src="./media/img/SWlogo.png" alt="Home page"></a>
+        </div>
+        <div class="navbar">
+            <a href="./contact.html">Contact</a>
+            <a href="./programming.html">Programming</a>
+            <a href="./3DModelling.html">3D Modelling</a>
+            <a href="./index.html">Home</a>
+        </div>
+    </div>
+
+    <div class="projectgradientbg">
+        <div class="projectbgcontainer">
+            <h1 id="projectbgtitle">
+                Rapture
+            </h1>
+            <span>
+                Inspired by Bioshock
+            </span>
+        </div>
+    </div>
+
+
+<div class="maincontent">
+
+    <div class="slideshow_container">
+        <img src="./media/img/3DModelling/RapturePostProcessed.png" alt="" style="width: 100%;">
+        <div class="img_caption">Final Render - Post Processed</div>
+    </div>
+
+    <div class="slideshow_container">
+        <img src="./media/img/3DModelling/RaptureRender.png" alt="" style="width: 100%;">
+        <div class="img_caption">4k Render</div>
+    </div>
+
+    <div class="slideshow_container">
+        <img src="./media/img/3DModelling/RaptureClayRender1.png" alt="" style="width: 100%;">
+        <div class="img_caption">Clay Render 1</div>
+    </div>
+
+    <div class="slideshow_container">
+        <img src="./media/img/3DModelling/RaptureClayRender2.png" alt="" style="width: 100%;">
+        <div class="img_caption">Clay Render 2</div>
+    </div>
+
+    <div class="slideshow_container">
+        <img src="./media/img/3DModelling/RaptureOverview.png" alt="" style="width: 100%;">
+        <div class="img_caption">Project Overview</div>
+    </div>
+
+    <button class="button-left" onclick="plusDivs(-1)">&#10094;</button>
+    <button class="button-right" onclick="plusDivs(+1)">&#10095;</button>
+
+
+    <div class="project_desc">
+        <h2>Programs Used:</h2>
+        <p>
+            Blender, Adobe Photoshop
+        </p>
+
+        <h3>About</h3>
+        <p id="margin-bottom">
+            Click <a href="./media/img/3DModelling/RapturePostProcessed.png" target="_blank">here</a> to view in 4k.
+            <br><br>
+            Since the <a href="https://bioshock.fandom.com/wiki/BioShock_Wiki" target="_blank">Bioshock</a> franchise is one of my favourites, recreating one of the cities from the games - either Rapture or Columbia - is something I have always wanted to do, but never got around to until now. This project was something completely different to everything else I have done and came with a learning curve. Creating a city at full scale is tough. Personally, I struggled to reach a point in which I was happy with the project for the first 70% or so. Creating buildings, even if they are modelled and textured well, look strange when they're not in an environment with other objects and proper lighting. For most of the project I had to believe that I could bring it all together in the final few stages. Luckily, I think I managed it. Once I started to work on the composition, environment modelling and lighting, everything started to slowly come together.
+            <br><br>
+            Blender was used to create all of the models with help from <a href="https://www.poliigon.com/" target="_blank">Poliigon.</a> Since Rapture has such a unique aesthetic, I could not just use an addon like <a href="https://github.com/domlysz/BlenderGIS" target="_blank">BlenderGIS</a> or <a href="https://github.com/vvoovv/blosm" target="_blank">Blosm</a>. The final render can be seen on the second image of the slideshow above.
+            <br>
+            All of the post processing was done in Photoshop. This includes; Film grain, gaussian blur, chromatic abberation, bloom, additional texturing, caustics, light rays, bokeh dust particles, increased contrast and increased vibrance.
+            <br><br>
+            As happy as I am with the final result, there is a plethora of ways to improve it, as there always is. A lot of the emission materials could have been made better with better texturing too, the buildings could have less sharp edges, the buildings in the background could have more detail, the underwater effect could be done better... A lot could be done. But art is never perfect, and I think the current state is a good representation of where my current skillset is when working in this timeframe. 
+        </p>
+    </div>
+</div>
+
+
+<!-- Image Slideshow [W3Schools] -->
+<script>
+var slideIndex = 1;
+showDivs(slideIndex);
+
+function plusDivs(n) {
+    showDivs(slideIndex += n);
+}
+
+function showDivs(n) {
+    var i;
+    var x = document.getElementsByClassName("slideshow_container");
+    if (n > x.length) {slideIndex = 1}
+    if (n < 1) {slideIndex = x.length}
+    for (i = 0; i < x.length; i++) {
+        x[i].style.display = "none";
+    }
+    x[slideIndex-1].style.display = "block";
+}
+</script>
+<!-- Image Slideshow [W3Schools] -->
+
+
+</body>
+</html>
